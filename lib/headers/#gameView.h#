@@ -1,0 +1,17 @@
+#include "common.h"
+
+class gameView {
+
+ private:
+	Canvas *canvas;
+	void drawPixel(point p, color c);
+	void clearPixel(point p);
+	
+ public:
+	gameView(Canvas *canvas);
+
+	
+
+
+
+} 
