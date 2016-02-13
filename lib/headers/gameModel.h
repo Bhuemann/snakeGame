@@ -1,35 +1,22 @@
 #include "common.h"
 #include "snake.h"
+#include <vector>
 
-class SnakeGameModel {
+class gameModel {
 
  private:
-  snakeGameView *view;
 
-  int** board;
-  Snake snakes[];
-  const int numPlayers;
-  controller snakeController;
+	vector<snake> snakeList(2);
+	vector<inputDevice> inputList(2);
+	vector<vector<int>> board(64, vector<int>(64));
+	point foodLocation;
+	const int numPlayers;
+	const int boardWidth;
+	const int boardLength;
 
-  int* calcSnakePos(int numSnake);
 
  public:
-  model(snakeGameView *view);
-  virtual ~model();
-
-  //checks to see if board[x][y] is available (no snakes && inside board)
-  static bool isAvailable(int x, int y);
-
-  const int** getBoard() const {
-    return board;
-  }
-
-  const int getNumPlayers() const {
-    return numPlayers;
-  }
-
-  const Snake* getSnakes() const {
-    return snakes;
-  }
+	gameModel();
 
 };
+
