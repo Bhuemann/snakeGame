@@ -6,8 +6,8 @@ class gameModel {
 
  private:
 
-	vector<snake> snakeList(2);
-	vector<inputDevice> inputList(2);
+	vector<snake*> snakeList(2);
+	vector<inputDevice*> inputList(2);
 	vector<vector<int>> board(64, vector<int>(64));
 	point foodLocation;
 	const int numPlayers;
@@ -17,6 +17,11 @@ class gameModel {
 
  public:
 	gameModel();
+	void addInputDevice(inputDevice device);
+	vector<inputDevice*> getInputDevices();
+	vector<snake*> getSnakes();
+	vector<vector<int>> getBoard();
+	point getFoodLocation();
 
 };
 
