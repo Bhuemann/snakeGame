@@ -17,11 +17,23 @@ class gameModel {
 
  public:
 	gameModel();
+
+	//add a input object to vector array
 	void addInputDevice(inputDevice device);
+
+	//return inputList
 	vector<inputDevice*> getInputDevices();
+
+	//return snakeList
 	vector<snake*> getSnakes();
+
+	//return board
 	vector<vector<int>> getBoard();
+
+	//returns the point at which the food is located
 	point getFoodLocation();
 
+	//generates a random point and stores it into foodLocation
+	void generateNewFoodLocation()
 };
 
