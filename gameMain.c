@@ -8,9 +8,9 @@ int main(int argc, const char * argv[]){
 
 
 	int fileno;
-	gameView view = new gameView();
-	gameModel model = new gameModel();
-	gameController controller;
+	gameView* view = gameView();
+	gameModel* model = gameModel();
+	gameController* controller;
 	
 	//check if controller fileno is passed
 	if(argc > 1){
@@ -23,13 +23,13 @@ int main(int argc, const char * argv[]){
 			exit(1);
 		}
 
-		controller = new gameController(view, model, fileno)
+		controller = gameController(view, model, fileno)
 		
 	}
 	else{
 
 		//if not, let controller handle setting up input device
-		controller = new gameController(view, model);
+		controller = gameController(view, model);
 		
 	}
 

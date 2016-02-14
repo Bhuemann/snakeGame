@@ -7,11 +7,12 @@
 class gameController{
 
  private:
-	gameView view;
-	gameModel model;
+	gameView* view;
+	gameModel* model;
 	
  public:
-	gameController(gameView view, gameModel model);
+	gameController(gameView* view, gameModel* model);
+	gameController(gameView* view, gameModel* model, int fileno);
 
 	//updates
 	void updateBoard(point p, color c);
@@ -22,7 +23,9 @@ class gameController{
 	//clean up after game ends
 	void cleanUp();
 
-
+	//does all the necessary steps to get the game ready to begin()
+	void initialize();
+	
 }
 
 
