@@ -128,3 +128,10 @@ public buttonPress poll(){
 	}
 	
 }
+
+public void setSnake(snake* snake){
+	this->snake = snake;
+}
+public snake* getSnake(){
+	return this->snake;
+}

@@ -14,6 +14,6 @@ class inputDevice {
 	inputDevice(int playerNum);
 	buttonPress poll();
 	void setSnake(snake* snake);
-
+	snake* getSnake();
 
 }
