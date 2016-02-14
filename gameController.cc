@@ -49,9 +49,34 @@ void begin(){
 
 	while(gameIsRunning){
 
+		vector<inputDevice> devices = model->getInputDevices();
+		buttonPress button;
+
+		//poll all controllers and change each snakes direction
+		for(int i = 0; i < devices.size(); i++){
+
+			button = devices.get(i)->poll();
+
+			switch(button){
+			case buttonPress.DPAD_UP:
+				devices.get(i)->setDirection(direction.NORTH);
+				break;
+			case buttonPress.DPAD_DOWN:
+				devices.get(i)->setDirection(direction.SOUTH);
+				break;
+			case buttonPress.DPAD_LEFT:
+				devices.get(i)->setDirection(direction.WEST);
+				break;
+			case buttonPress.DPAD_RIGHT:
+				devices.get(i)->setDirection(direction.EAST);
+				break;
+			}
+		}
+
+
+		//loop through all snakes and move them. Check collison and food location
+		//TODO: fix when multiple snakes collide in same tick
 		
-
-
 
 	}
 

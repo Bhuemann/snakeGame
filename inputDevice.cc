@@ -114,7 +114,8 @@ public buttonPress poll(){
 
 				if(jse.value == -32767){
 					printf("player%d pressed the DPAD LEFT\n", playerNum);
-					return buttonPress.DPAD_LEFT;
+
+					Return buttonPress.DPAD_LEFT;
 				}
 				else{
 					printf("player%d pressed the DPAD RIGHT\n", playerNum);
