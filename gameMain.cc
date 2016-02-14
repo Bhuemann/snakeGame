@@ -35,7 +35,7 @@ int main(int argc, const char * argv[]){
 
 	
 	controller.intialize();
-	
+	controller.startCountDown(3);
 	controller.begin();
 
 	

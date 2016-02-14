@@ -16,7 +16,7 @@ class SnakeGameView {
 	void clearBoard();
 	
  public:
-	SnakeGameView(Canvas *canvas);
+	SnakeGameView();
 	
 	//initialize canvas and its attributes
 	void initialize(int boardSize, numSnakes);
@@ -48,4 +48,6 @@ class SnakeGameView {
 	//draw food at a random location on board
 	void drawFood(point p);
 
+	//draws a count down onto the screen. Also will put the thread to sleep as it counts down.
+	void drawCountDown(int sec);
 }
