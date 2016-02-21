@@ -1,3 +1,5 @@
+#ifndef JOYSTICK_H
+#defien JOYSTICK_H
 
 #include "joystick.h"
 class inputDevice {
@@ -17,3 +19,5 @@ class inputDevice {
 	snake* getSnake();
 
 }
+
+#endif

@@ -1,4 +1,7 @@
-#includ "snake.h"
+#ifndef SNAKE_H
+#define SNAKE_H
+
+#include "common.h"
 
 class snake {
 
@@ -18,3 +21,5 @@ class snake {
 	void grow();
 
 } 
+
+#endif

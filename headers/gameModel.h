@@ -1,3 +1,6 @@
+#ifndef GAMEMODEL_H
+#define GAMEMODEL_H
+
 #include "common.h"
 #include "snake.h"
 #include <vector>
@@ -37,3 +40,4 @@ class gameModel {
 	void generateNewFoodLocation()
 };
 
+#endif

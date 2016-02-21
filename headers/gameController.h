@@ -1,3 +1,5 @@
+#ifndef GAMECONTROLLER_H
+#define GAMECONTROLLER_H
 
 #include "common.h"
 #include "gameView.h"
@@ -28,4 +30,4 @@ class gameController{
 	
 }
 
-
+#endif

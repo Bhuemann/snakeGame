@@ -1,3 +1,6 @@
+#ifndef GAMEVIEW_H
+#define GAMEVIEW_H
+
 #include "common.h"
 
 class SnakeGameView {
@@ -51,3 +54,5 @@ class SnakeGameView {
 	//draws a count down onto the screen. Also will put the thread to sleep as it counts down.
 	void drawCountDown(int sec);
 }
+
+#endif
